@@ -1,0 +1,15 @@
+//usar base de datos
+use("Urban-Butike")
+
+//insertar el documento de la coleccion ususarios
+db.productos.insertOne({
+    talla:"M" ,
+    color: "azul",
+    nombre:"pantalon",
+    estilo:"oversize",
+    descripcion:"pantalon azul" ,
+    precio_compra: 150,
+    precio_venta: 200,
+    id_catalogo: 1,
+    id_categoria: 1
+})

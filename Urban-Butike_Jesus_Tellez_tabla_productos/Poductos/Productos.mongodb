@@ -1,0 +1,63 @@
+//usar la base de datos
+use("Urban-Butike")
+
+//Crear coleccion de usuario
+db.createCollection("productos",{
+    validator:{
+        $jsonSchema:{
+            bsonType:'object',
+            title:'Validacion del objeto productos ',
+            required:['talla','color','nombre','estilo','descripcion','precio_compra','precio_venta'],
+            properties: { 
+                talla: {
+                    bsonType: 'string',
+                    description: 'talla de vestido o calzado',
+                    pattern: "^[SMLXL]+$" // Permite valores como S, M, L, XL
+                },
+                color: {
+                    bsonType: 'string',
+                    description: 'color de la ropa o calzado elegido',
+                    pattern: "^[a-zA-Z]+$" // Solo letras, sin espacios
+                },
+                nombre: {
+                    bsonType: 'string',
+                    description: 'nombre del cliente',
+                    pattern: "^[a-zA-Z\\s]+$" // Solo letras y espacios
+                },
+                estilo: {
+                    bsonType: 'string',
+                    description: 'estilo de la ropa o calzado',
+                    pattern: "^[a-zA-Z]+$" // Solo letras, sin espacios
+                },
+                descripcion: {
+                    bsonType: 'string',
+                    description: 'descripción del producto',
+                    pattern: "^[\\w\\s]+$" // Letras, números y espacios
+                },
+                precio_compra: {
+                    bsonType: 'int',
+                    description: 'precio del producto o calzado comprado',
+                    pattern: "^\\d+$" // Solo dígitos
+                },
+                precio_venta: {
+                    bsonType: 'int',
+                    description: 'precio de la venta de la ropa o calzado',
+                    pattern: "^\\d+$" // Solo dígitos
+                },
+                id_catalogo: {
+                    bsonType: 'int',
+                    description: 'ID del producto elegido',
+                    pattern: "^\\d+$" // Solo dígitos
+                },
+                id_categoria: {
+                    bsonType: 'int',
+                    description: 'ID de la categoría del calzado o ropa',
+                    pattern: "^\\d+$" // Solo dígitos
+                }
+            }
+            
+        }
+    }
+})
+
+
