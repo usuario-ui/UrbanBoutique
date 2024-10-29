@@ -1,0 +1,5 @@
+//usar la base de datos 
+use("Urban-Butike")
+
+//eliminar la base de datos
+db.clientes.drop()

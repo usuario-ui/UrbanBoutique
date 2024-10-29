@@ -1,0 +1,11 @@
+//usar base de datos
+use("Urban-Butike")
+
+//insertar el documento de la coleccion ususarios
+db.clientes.insertOne({
+    nombre: 'Jesus',
+    apellido: 'Sanchez Cornejo',
+    telefono: '3531396645',
+    direccion: 'Calle #59', // Ajuste en la dirección
+    email: 'unadireccion@gmail.com' // Corrección en el email
+})

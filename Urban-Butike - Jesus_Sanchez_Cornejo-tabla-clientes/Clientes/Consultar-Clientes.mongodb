@@ -1,0 +1,6 @@
+//usar base de datos
+use("Urban-Butike")
+
+//consultar los regiostros
+//selec * from usuarios
+db.clientes.find()

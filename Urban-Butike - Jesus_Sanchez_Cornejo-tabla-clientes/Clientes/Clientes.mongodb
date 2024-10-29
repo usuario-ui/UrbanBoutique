@@ -1,0 +1,40 @@
+//usar la base de datos
+use("Urban-Butike")
+
+// Crear la colección con validación simplificada
+db.createCollection("clientes", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validación del objeto clientes',
+            required: ['nombre', 'apellido', 'telefono', 'direccion', 'email'],
+            properties: {
+                nombre: {
+                    bsonType: 'string',
+                    description: 'nombre del cliente',
+                    pattern: "^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$" // Permite letras y espacios
+                },
+                apellido: {
+                    bsonType: 'string',
+                    description: 'apellido del cliente',
+                    pattern: "^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$" // Permite letras y espacios
+                },
+                telefono: {
+                    bsonType: 'string',
+                    description: 'telefono del cliente',
+                    pattern: "^[0-9]{7,15}$" // Solo dígitos entre 7 y 15 caracteres
+                },
+                direccion: {
+                    bsonType: 'string',
+                    description: 'direccion del cliente',
+                    pattern: "^[A-Za-z0-9#\\-\\., ]+$" // Simplificado para permitir letras, números y ciertos caracteres
+                },
+                email: {
+                    bsonType: 'string',
+                    description: 'correo electronico del cliente',
+                    pattern: "^[\\w\\.-]+@[\\w\\.-]+\\.[a-zA-Z]{2,}$" // Valida estructura básica de email
+                }
+            }
+        }
+    }
+})
