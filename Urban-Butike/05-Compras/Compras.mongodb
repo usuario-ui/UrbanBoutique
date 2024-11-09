@@ -1,0 +1,61 @@
+//usar base de datos 
+use("Urban-Butike");
+
+// Colección: Compras (Con productos de compra embebidos)
+db.createCollection("compras", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validación del objeto compra',
+            required: ['id_compra', 'total_productos', 'precio_unitario', 'precio_total', 'fecha', 'numero_compra', 'tipo_Pago', 'productos'],
+            properties: {
+                id_compra: {
+                    bsonType: 'int',
+                    description: 'ID único de la compra'
+                },
+                total_productos: {
+                    bsonType: 'int',
+                    description: 'Cantidad total de productos en la compra'
+                },
+                precio_unitario: {
+                    bsonType: 'double',
+                    description: 'Precio unitario de los productos en la compra'
+                },
+                precio_total: {
+                    bsonType: 'double',
+                    description: 'Precio total de la compra'
+                },
+                fecha: {
+                    bsonType: 'date',
+                    description: 'Fecha de la compra'
+                },
+                numero_compra: {
+                    bsonType: 'string',
+                    description: 'Número de compra'
+                },
+                tipo_Pago: {
+                    bsonType: 'string',
+                    description: 'Tipo de pago'
+                },
+                // Productos de la compra embebidos
+                productos: {
+                    bsonType: 'array',
+                    items: {
+                        bsonType: 'object',
+                        required: ['id_producto', 'cantidad'],
+                        properties: {
+                            id_producto: {
+                                bsonType: 'int',
+                                description: 'ID del producto comprado'
+                            },
+                            cantidad: {
+                                bsonType: 'int',
+                                description: 'Cantidad de este producto en la compra'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+});

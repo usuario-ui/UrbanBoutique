@@ -1,0 +1,79 @@
+//usar base de datos 
+use("Urban-Butike");
+
+// Colección: Venta (Con productos vendidos y abonos embebidos)
+db.createCollection("venta", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validación del objeto venta',
+            required: ['id_venta', 'fecha_venta', 'num_productos', 'total_venta', 'id_cliente', 'productos', 'abonos'],
+            properties: {
+                id_venta: {
+                    bsonType: 'int',
+                    description: 'ID único de la venta'
+                },
+                fecha_venta: {
+                    bsonType: 'date',
+                    description: 'Fecha de la venta'
+                },
+                num_productos: {
+                    bsonType: 'int',
+                    description: 'Número total de productos en la venta'
+                },
+                total_venta: {
+                    bsonType: 'double',
+                    description: 'Total de la venta'
+                },
+                id_cliente: {
+                    bsonType: 'int',
+                    description: 'ID del cliente asociado a la venta'
+                },
+                // Productos vendidos embebidos
+                productos: {
+                    bsonType: 'array',
+                    items: {
+                        bsonType: 'object',
+                        required: ['id_producto', 'cantidad', 'precio'],
+                        properties: {
+                            id_producto: {
+                                bsonType: 'int',
+                                description: 'ID del producto vendido'
+                            },
+                            cantidad: {
+                                bsonType: 'int',
+                                description: 'Cantidad de este producto en la venta'
+                            },
+                            precio: {
+                                bsonType: 'double',
+                                description: 'Precio unitario del producto'
+                            }
+                        }
+                    }
+                },
+                // Abonos embebidos
+                abonos: {
+                    bsonType: 'array',
+                    items: {
+                        bsonType: 'object',
+                        required: ['id_abono', 'fecha_abono', 'cantidad_faltante'],
+                        properties: {
+                            id_abono: {
+                                bsonType: 'int',
+                                description: 'ID del abono'
+                            },
+                            fecha_abono: {
+                                bsonType: 'date',
+                                description: 'Fecha del abono'
+                            },
+                            cantidad_faltante: {
+                                bsonType: 'double',
+                                description: 'Cantidad faltante en el abono'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+});

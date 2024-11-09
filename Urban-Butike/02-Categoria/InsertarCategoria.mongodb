@@ -1,0 +1,251 @@
+use("Urban-Butike");
+db.categoria.insertMany([
+    { 
+        id_categoria: 1,
+        "categoria": "Ropa Masculina" 
+    },
+
+    {
+        id_categoria: 2,
+         "categoria": "Calzado Masculino" 
+    },
+
+    { 
+        id_categoria: 3,
+        "categoria": "Accesorios de Moda" 
+    },
+
+    { 
+        id_categoria: 4,
+        "categoria": "Camisas" 
+    },
+
+    { 
+        id_categoria: 5,
+        "categoria": "Pantalones" 
+    },
+
+    { 
+        id_categoria: 6,
+        "categoria": "Chaquetas" 
+    },
+
+    { 
+        id_categoria: 7,
+        "categoria": "Corbatas y Pañuelos" 
+    },
+
+    { 
+        id_categoria: 8,
+        "categoria": "Bufandas" 
+    },
+
+    { 
+        id_categoria: 9,
+        "categoria": "Sombreros" 
+    },
+    
+    { 
+        id_categoria: 10,
+        "categoria": "Cinturones" 
+    },
+    
+    { 
+        id_categoria: 11,
+        "categoria": "Relojes" 
+    },
+
+    { 
+        id_categoria: 12,
+        "categoria": "Bolsos" 
+    },
+
+    { 
+        id_categoria: 13,
+        "categoria": "Joyería" 
+    },
+
+    { 
+        id_categoria: 14,
+        "categoria": "Gafas de Sol" 
+    },
+
+    { 
+        id_categoria: 15,
+        "categoria": "Deportiva" 
+    },
+    
+    { 
+        id_categoria: 16,
+        "categoria": "Casual" 
+    },
+
+    { 
+        id_categoria: 17,
+        "categoria": "Formal" 
+    },
+
+    { 
+        id_categoria: 18,
+        "categoria": "Calzado Deportivo" 
+    },
+
+    { 
+        id_categoria: 19,
+        "categoria": "Calzado Formal" 
+    },
+
+    { 
+        id_categoria: 20,
+        "categoria": "Zapatos Casual" 
+    },
+
+    { 
+        id_categoria: 21,
+        "categoria": "Perfumes y Fragancias" 
+    },
+
+    { 
+        id_categoria: 22,
+        "categoria": "Productos de Cuidado Personal" 
+    },
+
+    { 
+        id_categoria: 23,
+        "categoria": "Ropa de Invierno" 
+    },
+
+    { 
+        id_categoria: 24,
+        "categoria": "Ropa de Verano" 
+    },
+
+    { 
+        id_categoria: 25,
+        "categoria": "Ropa Interior" 
+    },
+
+    { 
+        id_categoria: 26,
+        "categoria": "Calcetines" 
+    },
+
+    { 
+        id_categoria: 27,
+        "categoria": "Trajes de Baño" 
+    },
+
+    { 
+        id_categoria: 28,
+        "categoria": "Pijamas" 
+    },
+
+    { 
+        id_categoria: 29,
+        "categoria": "Camisetas" 
+    },
+
+    { 
+        id_categoria: 30,
+        "categoria": "Suéteres" 
+    },
+
+    { 
+        id_categoria: 31,
+        "categoria": "Polos" 
+    },
+    
+    { 
+        id_categoria: 32,
+        "categoria": "Sudaderas" 
+    },
+
+    { 
+        id_categoria: 33,
+        "categoria": "Blazers" 
+    },
+
+    { 
+        id_categoria: 34,
+        "categoria": "Chalecos" 
+    },
+
+    { 
+        id_categoria: 35,
+        "categoria": "Jeans" 
+    },
+    
+    { 
+        id_categoria: 36,
+        "categoria": "Ropa Vintage" 
+    },
+
+    { 
+        id_categoria: 37,
+        "categoria": "Ropa de Temporada" 
+    },
+
+    { 
+        id_categoria: 38,
+        "categoria": "Prendas Especiales" 
+    },
+
+    { 
+        id_categoria: 39,
+        "categoria": "Accesorios de Oficina" 
+    },
+
+    { 
+        id_categoria: 40,
+        "categoria": "Gorras y Gorros" 
+    },
+
+    { 
+        id_categoria: 41,
+        "categoria": "Ropa de Trabajo" 
+    },
+
+    { 
+        id_categoria: 42,
+        "categoria": "Ropa de Caza" 
+    },
+
+    { 
+        id_categoria: 43,
+        "categoria": "Ropa de Escalada" 
+    },
+
+    { 
+        id_categoria: 44,
+        "categoria": "Ropa de Ciclismo" 
+    },
+
+    { 
+        id_categoria: 45,
+        "categoria": "Ropa Urbana" 
+    },
+
+    { 
+        id_categoria: 46,
+        "categoria": "Ropa de Skate" 
+    },
+
+    { 
+        id_categoria: 47,
+        "categoria": "Ropa para Lluvia" 
+    },
+
+    { 
+        id_categoria: 48,
+        "categoria": "Accesorios Tecnológicos" 
+    },
+
+    { 
+        id_categoria: 49,
+        "categoria": "Artículos de Regalo" 
+    },
+
+    { id_categoria: 50,
+        "categoria": "Ropa Eco Friendly" 
+    }
+]);

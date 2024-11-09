@@ -1,0 +1,1186 @@
+use("Urban-Butike");
+
+
+
+db.productos.insertMany([
+    {
+        id_producto: 1,
+        talla: "S",
+        color: "Rojo",
+        nombre: "Camiseta Básica",
+        descripcion: "Camiseta de algodón",
+        precio_compra: 100.00,
+        precio_venta: 150.00,
+        id_catalogo: 1,
+        id_categoria: 1,
+        inventario: {
+            cantidad_stock: 50
+        }
+    },
+    {
+        id_producto: 2,
+        talla: "M",
+        color: "Azul",
+        nombre: "Camisa de Vestir",
+        descripcion: "Camisa de manga larga",
+        precio_compra: 200.00,
+        precio_venta: 300.00,
+        id_catalogo: 1,
+        id_categoria: 2,
+        inventario: {
+            cantidad_stock: 30
+        }
+    },
+    {
+        id_producto: 3,
+        talla: "L",
+        color: "Negro",
+        nombre: "Pantalón de Mezclilla",
+        descripcion: "Pantalón de mezclilla azul oscuro",
+        precio_compra: 250.00,
+        precio_venta: 350.00,
+        id_catalogo: 1,
+        id_categoria: 3,
+        inventario: {
+            cantidad_stock: 40
+        }
+    },
+    {
+        id_producto: 4,
+        talla: "XL",
+        color: "Blanco",
+        nombre: "Chaqueta de Cuero",
+        descripcion: "Chaqueta negra de cuero",
+        precio_compra: 500.00,
+        precio_venta: 750.00,
+        id_catalogo: 1,
+        id_categoria: 4,
+        inventario: {
+            cantidad_stock: 20
+        }
+    },
+    {
+        id_producto: 5,
+        talla: "M",
+        color: "Gris",
+        nombre: "Sudadera con Capucha",
+        descripcion: "Sudadera de algodón con capucha",
+        precio_compra: 150.00,
+        precio_venta: 250.00,
+        id_catalogo: 1,
+        id_categoria: 5,
+        inventario: {
+            cantidad_stock: 35
+        }
+    },
+    {
+        id_producto: 6,
+        talla: "S",
+        color: "Verde",
+        nombre: "Vestido de Verano",
+        descripcion: "Vestido ligero de verano",
+        precio_compra: 300.00,
+        precio_venta: 450.00,
+        id_catalogo: 1,
+        id_categoria: 6,
+        inventario: {
+            cantidad_stock: 25
+        }
+    },
+    {
+        id_producto: 7,
+        talla: "L",
+        color: "Amarillo",
+        nombre: "Falda de Cuero",
+        descripcion: "Falda corta de cuero sintético",
+        precio_compra: 350.00,
+        precio_venta: 500.00,
+        id_catalogo: 1,
+        id_categoria: 7,
+        inventario: {
+            cantidad_stock: 15
+        }
+    },
+    {
+        id_producto: 8,
+        talla: "M",
+        color: "Rojo",
+        nombre: "Zapatos Deportivos",
+        descripcion: "Zapatos deportivos ligeros",
+        precio_compra: 200.00,
+        precio_venta: 350.00,
+        id_catalogo: 2,
+        id_categoria: 8,
+        inventario: {
+            cantidad_stock: 60
+        }
+    },
+    {
+        id_producto: 9,
+        talla: "L",
+        color: "Azul",
+        nombre: "Camiseta Polo",
+        descripcion: "Camiseta polo de algodón",
+        precio_compra: 120.00,
+        precio_venta: 200.00,
+        id_catalogo: 2,
+        id_categoria: 9,
+        inventario: {
+            cantidad_stock: 55
+        }
+    },
+    {
+        id_producto: 10,
+        talla: "XL",
+        color: "Negro",
+        nombre: "Abrigo de Lana",
+        descripcion: "Abrigo largo de lana",
+        precio_compra: 800.00,
+        precio_venta: 1200.00,
+        id_catalogo: 2,
+        id_categoria: 10,
+        inventario: {
+            cantidad_stock: 10
+        }
+    },
+    {
+        id_producto: 11,
+        talla: "S",
+        color: "Gris",
+        nombre: "Pantalón Chino",
+        descripcion: "Pantalón chino gris claro",
+        precio_compra: 200.00,
+        precio_venta: 320.00,
+        id_catalogo: 2,
+        id_categoria: 11,
+        inventario: {
+            cantidad_stock: 45
+        }
+    },
+    {
+        id_producto: 12,
+        talla: "M",
+        color: "Verde",
+        nombre: "Jersey de Punto",
+        descripcion: "Jersey de lana verde oscuro",
+        precio_compra: 280.00,
+        precio_venta: 400.00,
+        id_catalogo: 2,
+        id_categoria: 12,
+        inventario: {
+            cantidad_stock: 30
+        }
+    },
+    {
+        id_producto: 13,
+        talla: "L",
+        color: "Blanco",
+        nombre: "Camiseta Gráfica",
+        descripcion: "Camiseta con diseño gráfico",
+        precio_compra: 100.00,
+        precio_venta: 180.00,
+        id_catalogo: 2,
+        id_categoria: 13,
+        inventario: {
+            cantidad_stock: 70
+        }
+    },
+    {
+        id_producto: 14,
+        talla: "XL",
+        color: "Amarillo",
+        nombre: "Chaleco Acolchado",
+        descripcion: "Chaleco acolchado resistente",
+        precio_compra: 300.00,
+        precio_venta: 450.00,
+        id_catalogo: 2,
+        id_categoria: 14,
+        inventario: {
+            cantidad_stock: 25
+        }
+    },
+    {
+        id_producto: 15,
+        talla: "S",
+        color: "Negro",
+        nombre: "Blusa de Seda",
+        descripcion: "Blusa suave de seda",
+        precio_compra: 350.00,
+        precio_venta: 600.00,
+        id_catalogo: 2,
+        id_categoria: 15,
+        inventario: {
+            cantidad_stock: 20
+        }
+    },
+    {
+        id_producto: 16,
+        talla: "M",
+        color: "Rojo",
+        nombre: "Traje de Baño",
+        descripcion: "Traje de baño de una pieza",
+        precio_compra: 150.00,
+        precio_venta: 250.00,
+        id_catalogo: 2,
+        id_categoria: 16,
+        inventario: {
+            cantidad_stock: 40
+        }
+    },
+    {
+        id_producto: 17,
+        talla: "L",
+        color: "Azul",
+        nombre: "Jeans Rasgados",
+        descripcion: "Jeans rasgados de moda",
+        precio_compra: 250.00,
+        precio_venta: 380.00,
+        id_catalogo: 2,
+        id_categoria: 17,
+        inventario: {
+            cantidad_stock: 25
+        }
+    },
+    {
+        id_producto: 18,
+        talla: "XL",
+        color: "Blanco",
+        nombre: "Camisa de Lino",
+        descripcion: "Camisa ligera de lino",
+        precio_compra: 400.00,
+        precio_venta: 600.00,
+        id_catalogo: 2,
+        id_categoria: 18,
+        inventario: {
+            cantidad_stock: 35
+        }
+    },
+    {
+        id_producto: 19,
+        talla: "S",
+        color: "Verde",
+        nombre: "Pantalones Cortos",
+        descripcion: "Pantalones cortos para el verano",
+        precio_compra: 120.00,
+        precio_venta: 200.00,
+        id_catalogo: 2,
+        id_categoria: 19,
+        inventario: {
+            cantidad_stock: 60
+        }
+    },
+    {
+        id_producto: 20,
+        talla: "M",
+        color: "Gris",
+        nombre: "Jacket Deportiva",
+        descripcion: "Jacket ligera y cómoda",
+        precio_compra: 180.00,
+        precio_venta: 300.00,
+        id_catalogo: 2,
+        id_categoria: 20,
+        inventario: {
+            cantidad_stock: 55
+        }
+    },
+   
+        {
+            id_producto: 21,
+            talla: "L",
+            color: "Rojo",
+            nombre: "Vestido de Noche",
+            descripcion: "Vestido largo de noche",
+            precio_compra: 600.00,
+            precio_venta: 900.00,
+            id_catalogo: 2,
+            id_categoria: 21,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 22,
+            talla: "S",
+            color: "Azul",
+            nombre: "Polo Slim Fit",
+            descripcion: "Camiseta polo ajustada",
+            precio_compra: 140.00,
+            precio_venta: 220.00,
+            id_catalogo: 2,
+            id_categoria: 22,
+            inventario: {
+                cantidad_stock: 45
+            }
+        },
+        {
+            id_producto: 23,
+            talla: "M",
+            color: "Negro",
+            nombre: "Cazadora de Piel",
+            descripcion: "Cazadora moderna de piel",
+            precio_compra: 500.00,
+            precio_venta: 800.00,
+            id_catalogo: 2,
+            id_categoria: 23,
+            inventario: {
+                cantidad_stock: 15
+            }
+        },
+        {
+            id_producto: 24,
+            talla: "L",
+            color: "Blanco",
+            nombre: "Traje Formal",
+            descripcion: "Traje de dos piezas",
+            precio_compra: 1200.00,
+            precio_venta: 1800.00,
+            id_catalogo: 3,
+            id_categoria: 24,
+            inventario: {
+                cantidad_stock: 10
+            }
+        },
+        {
+            id_producto: 25,
+            talla: "XL",
+            color: "Verde",
+            nombre: "Pantalones Cargo",
+            descripcion: "Pantalones cargo resistentes",
+            precio_compra: 250.00,
+            precio_venta: 400.00,
+            id_catalogo: 3,
+            id_categoria: 25,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 26,
+            talla: "S",
+            color: "Gris",
+            nombre: "Camiseta Deportiva",
+            descripcion: "Camiseta de deporte",
+            precio_compra: 100.00,
+            precio_venta: 150.00,
+            id_catalogo: 3,
+            id_categoria: 26,
+            inventario: {
+                cantidad_stock: 60
+            }
+        },
+        {
+            id_producto: 27,
+            talla: "M",
+            color: "Rojo",
+            nombre: "Chaqueta Impermeable",
+            descripcion: "Chaqueta resistente al agua",
+            precio_compra: 300.00,
+            precio_venta: 500.00,
+            id_catalogo: 3,
+            id_categoria: 27,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 28,
+            talla: "L",
+            color: "Negro",
+            nombre: "Camisa Estampada",
+            descripcion: "Camisa con estampado original",
+            precio_compra: 150.00,
+            precio_venta: 250.00,
+            id_catalogo: 3,
+            id_categoria: 28,
+            inventario: {
+                cantidad_stock: 50
+            }
+        },
+        {
+            id_producto: 29,
+            talla: "XL",
+            color: "Blanco",
+            nombre: "Blazer Clásico",
+            descripcion: "Blazer ajustado clásico",
+            precio_compra: 500.00,
+            precio_venta: 800.00,
+            id_catalogo: 3,
+            id_categoria: 29,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 30,
+            talla: "S",
+            color: "Azul",
+            nombre: "Jeans Ajustados",
+            descripcion: "Jeans de corte ajustado",
+            precio_compra: 280.00,
+            precio_venta: 450.00,
+            id_catalogo: 3,
+            id_categoria: 30,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 31,
+            talla: "M",
+            color: "Verde",
+            nombre: "Chándal Completo",
+            descripcion: "Conjunto de chándal",
+            precio_compra: 400.00,
+            precio_venta: 600.00,
+            id_catalogo: 3,
+            id_categoria: 31,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 32,
+            talla: "L",
+            color: "Gris",
+            nombre: "Jersey con Capucha",
+            descripcion: "Jersey cómodo con capucha",
+            precio_compra: 150.00,
+            precio_venta: 250.00,
+            id_catalogo: 3,
+            id_categoria: 32,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 33,
+            talla: "XL",
+            color: "Negro",
+            nombre: "Gabardina de Algodón",
+            descripcion: "Gabardina larga de algodón",
+            precio_compra: 700.00,
+            precio_venta: 1000.00,
+            id_catalogo: 3,
+            id_categoria: 33,
+            inventario: {
+                cantidad_stock: 15
+            }
+        },
+        {
+            id_producto: 34,
+            talla: "S",
+            color: "Blanco",
+            nombre: "Camiseta Oversize",
+            descripcion: "Camiseta de corte holgado",
+            precio_compra: 130.00,
+            precio_venta: 200.00,
+            id_catalogo: 3,
+            id_categoria: 34,
+            inventario: {
+                cantidad_stock: 45
+            }
+        },
+        {
+            id_producto: 35,
+            talla: "M",
+            color: "Rojo",
+            nombre: "Sudadera con Estampado",
+            descripcion: "Sudadera con diseño impreso",
+            precio_compra: 180.00,
+            precio_venta: 280.00,
+            id_catalogo: 3,
+            id_categoria: 35,
+            inventario: {
+                cantidad_stock: 50
+            }
+        },
+        {
+            id_producto: 36,
+            talla: "L",
+            color: "Negro",
+            nombre: "Parka Impermeable",
+            descripcion: "Parka resistente al agua",
+            precio_compra: 500.00,
+            precio_venta: 750.00,
+            id_catalogo: 3,
+            id_categoria: 36,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 37,
+            talla: "XL",
+            color: "Verde",
+            nombre: "Pantalones de Algodón",
+            descripcion: "Pantalones ligeros de algodón",
+            precio_compra: 220.00,
+            precio_venta: 350.00,
+            id_catalogo: 3,
+            id_categoria: 37,
+            inventario: {
+                cantidad_stock: 55
+            }
+        },
+        {
+            id_producto: 38,
+            talla: "S",
+            color: "Azul",
+            nombre: "Camisa con Bolsillos",
+            descripcion: "Camisa casual con bolsillos",
+            precio_compra: 200.00,
+            precio_venta: 300.00,
+            id_catalogo: 3,
+            id_categoria: 38,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 39,
+            talla: "M",
+            color: "Gris",
+            nombre: "Traje de Baño de Dos Piezas",
+            descripcion: "Traje de baño moderno",
+            precio_compra: 150.00,
+            precio_venta: 250.00,
+            id_catalogo: 3,
+            id_categoria: 39,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 40,
+            talla: "L",
+            color: "Rojo",
+            nombre: "Chaqueta de Punto",
+            descripcion: "Chaqueta de punto abrigadora",
+            precio_compra: 350.00,
+            precio_venta: 500.00,
+            id_catalogo: 3,
+            id_categoria: 40,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 41,
+            talla: "XL",
+            color: "Blanco",
+            nombre: "Camisa con Bordado",
+            descripcion: "Camisa elegante con detalles bordados",
+            precio_compra: 400.00,
+            precio_venta: 600.00,
+            id_catalogo: 3,
+            id_categoria: 41,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 42,
+            talla: "S",
+            color: "Negro",
+            nombre: "Blusa Transparente",
+            descripcion: "Blusa ligera transparente",
+            precio_compra: 200.00,
+            precio_venta: 350.00,
+            id_catalogo: 3,
+            id_categoria: 42,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 43,
+            talla: "M",
+            color: "Azul",
+            nombre: "Zapatos de Tacón",
+            descripcion: "Zapatos elegantes con tacón",
+            precio_compra: 300.00,
+            precio_venta: 500.00,
+            id_catalogo: 3,
+            id_categoria: 43,
+            inventario: {
+                cantidad_stock: 15
+            }
+        },
+        {
+            id_producto: 44,
+            talla: "L",
+            color: "Verde",
+            nombre: "Vestido Midi",
+            descripcion: "Vestido de largo medio",
+            precio_compra: 350.00,
+            precio_venta: 550.00,
+            id_catalogo: 3,
+            id_categoria: 44,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 45,
+            talla: "XL",
+            color: "Gris",
+            nombre: "Abrigo de Invierno",
+            descripcion: "Abrigo grueso para invierno",
+            precio_compra: 700.00,
+            precio_venta: 1000.00,
+            id_catalogo: 3,
+            id_categoria: 45,
+            inventario: {
+                cantidad_stock: 10
+            }
+        },
+        {
+            id_producto: 46,
+            talla: "S",
+            color: "Rojo",
+            nombre: "Camiseta con Cuello Redondo",
+            descripcion: "Camiseta básica de manga corta",
+            precio_compra: 120.00,
+            precio_venta: 180.00,
+            id_catalogo: 3,
+            id_categoria: 46,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 47,
+            talla: "M",
+            color: "Blanco",
+            nombre: "Chaleco Ligero",
+            descripcion: "Chaleco acolchado ligero",
+            precio_compra: 250.00,
+            precio_venta: 400.00,
+            id_catalogo: 3,
+            id_categoria: 47,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 48,
+            talla: "L",
+            color: "Azul",
+            nombre: "Jeans Cintura Alta",
+            descripcion: "Jeans de cintura alta",
+            precio_compra: 300.00,
+            precio_venta: 450.00,
+            id_catalogo: 3,
+            id_categoria: 48,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 49,
+            talla: "M",
+            color: "Rojo",
+            nombre: "Camiseta",
+            descripcion: "Camiseta de algodón roja",
+            precio_compra: 120.50,
+            precio_venta: 199.99,
+            id_catalogo: 3,
+            id_categoria: 49,
+            inventario: {
+                cantidad_stock: 50
+            }
+        },
+        {
+            id_producto: 50,
+            talla: "L",
+            color: "Azul",
+            nombre: "Pantalón",
+            descripcion: "Pantalón de tela azul",
+            precio_compra: 250.00,
+            precio_venta: 359.99,
+            id_catalogo: 3,
+            id_categoria: 50,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 51,
+            talla: "S",
+            color: "Negro",
+            nombre: "Vestido",
+            descripcion: "Vestido negro largo",
+            precio_compra: 300.00,
+            precio_venta: 499.99,
+            id_catalogo: 3,
+            id_categoria: 51,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 52,
+            talla: "XL",
+            color: "Verde",
+            nombre: "Chaqueta",
+            descripcion: "Chaqueta de mezclilla verde",
+            precio_compra: 400.00,
+            precio_venta: 649.99,
+            id_catalogo: 3,
+            id_categoria: 52,
+            inventario: {
+                cantidad_stock: 15
+            }
+        },
+        {
+            id_producto: 53,
+            talla: "M",
+            color: "Blanco",
+            nombre: "Camisa",
+            descripcion: "Camisa blanca de algodón",
+            precio_compra: 180.00,
+            precio_venta: 299.99,
+            id_catalogo: 3,
+            id_categoria: 53,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 54,
+            talla: "L",
+            color: "Gris",
+            nombre: "Sudadera",
+            descripcion: "Sudadera gris con capucha",
+            precio_compra: 220.00,
+            precio_venta: 349.99,
+            id_catalogo: 3,
+            id_categoria: 54,
+            inventario: {
+                cantidad_stock: 45
+            }
+        },
+        {
+            id_producto: 55,
+            talla: "S",
+            color: "Marrón",
+            nombre: "Pantalón Corto",
+            descripcion: "Pantalón corto marrón",
+            precio_compra: 150.00,
+            precio_venta: 249.99,
+            id_catalogo: 3,
+            id_categoria: 55,
+            inventario: {
+                cantidad_stock: 60
+            }
+        },
+        {
+            id_producto: 56,
+            talla: "XL",
+            color: "Naranja",
+            nombre: "Camiseta de Manga Larga",
+            descripcion: "Camiseta naranja de manga larga",
+            precio_compra: 200.00,
+            precio_venta: 320.00,
+            id_catalogo: 3,
+            id_categoria: 56,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 57,
+            talla: "M",
+            color: "Rosa",
+            nombre: "Blusa",
+            descripcion: "Blusa rosa elegante",
+            precio_compra: 250.00,
+            precio_venta: 450.00,
+            id_catalogo: 3,
+            id_categoria: 57,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 58,
+            talla: "S",
+            color: "Verde Oliva",
+            nombre: "Chaleco",
+            descripcion: "Chaleco verde oliva",
+            precio_compra: 300.00,
+            precio_venta: 499.99,
+            id_catalogo: 3,
+            id_categoria: 58,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 59,
+            talla: "L",
+            color: "Beige",
+            nombre: "Zapatillas Deportivas",
+            descripcion: "Zapatillas deportivas beige",
+            precio_compra: 500.00,
+            precio_venta: 800.00,
+            id_catalogo: 3,
+            id_categoria: 59,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 60,
+            talla: "S",
+            color: "Rojo",
+            nombre: "Gafas de Sol",
+            descripcion: "Gafas de sol rojas",
+            precio_compra: 100.00,
+            precio_venta: 199.99,
+            id_catalogo: 3,
+            id_categoria: 60,
+            inventario: {
+                cantidad_stock: 55
+            }
+        },
+        {
+            id_producto: 61,
+            talla: "XL",
+            color: "Negro",
+            nombre: "Cinturón",
+            descripcion: "Cinturón de cuero negro",
+            precio_compra: 150.00,
+            precio_venta: 249.99,
+            id_catalogo: 3,
+            id_categoria: 61,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 62,
+            talla: "M",
+            color: "Gris",
+            nombre: "Bufanda",
+            descripcion: "Bufanda gris de lana",
+            precio_compra: 50.00,
+            precio_venta: 99.99,
+            id_catalogo: 3,
+            id_categoria: 62,
+            inventario: {
+                cantidad_stock: 70
+            }
+        },
+        {
+            id_producto: 63,
+            talla: "L",
+            color: "Blanco",
+            nombre: "Reloj",
+            descripcion: "Reloj de pulsera blanco",
+            precio_compra: 250.00,
+            precio_venta: 399.99,
+            id_catalogo: 3,
+            id_categoria: 63,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 64,
+            talla: "S",
+            color: "Negro",
+            nombre: "Sombrero",
+            descripcion: "Sombrero negro",
+            precio_compra: 80.00,
+            precio_venta: 159.99,
+            id_catalogo: 3,
+            id_categoria: 64,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 65,
+            talla: "XL",
+            color: "Verde",
+            nombre: "Traje de Baño",
+            descripcion: "Traje de baño verde",
+            precio_compra: 150.00,
+            precio_venta: 249.99,
+            id_catalogo: 3,
+            id_categoria: 65,
+            inventario: {
+                cantidad_stock: 45
+            }
+        },
+        {
+            id_producto: 66,
+            talla: "M",
+            color: "Azul",
+            nombre: "Pantalón de Chándal",
+            descripcion: "Pantalón de chándal azul",
+            precio_compra: 220.00,
+            precio_venta: 349.99,
+            id_catalogo: 3,
+            id_categoria: 66,
+            inventario: {
+                cantidad_stock: 60
+            }
+        },
+        {
+            id_producto: 67,
+            talla: "L",
+            color: "Negro",
+            nombre: "Sudadera con Capucha",
+            descripcion: "Sudadera negra con capucha",
+            precio_compra: 250.00,
+            precio_venta: 399.99,
+            id_catalogo: 3,
+            id_categoria: 67,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 68,
+            talla: "S",
+            color: "Rosa",
+            nombre: "Camiseta de Entrenamiento",
+            descripcion: "Camiseta rosa de entrenamiento",
+            precio_compra: 180.00,
+            precio_venta: 279.99,
+            id_catalogo: 3,
+            id_categoria: 68,
+            inventario: {
+                cantidad_stock: 50
+            }
+        },
+        {
+            id_producto: 69,
+            talla: "XL",
+            color: "Azul",
+            nombre: "Camisa de Manga Corta",
+            descripcion: "Camisa de manga corta azul",
+            precio_compra: 150.00,
+            precio_venta: 249.99,
+            id_catalogo: 3,
+            id_categoria: 69,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 70,
+            talla: "M",
+            color: "Gris",
+            nombre: "Chaqueta de Cuero",
+            descripcion: "Chaqueta de cuero gris",
+            precio_compra: 600.00,
+            precio_venta: 999.99,
+            id_catalogo: 3,
+            id_categoria: 70,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 71,
+            talla: "L",
+            color: "Naranja",
+            nombre: "Bañador",
+            descripcion: "Bañador naranja",
+            precio_compra: 120.00,
+            precio_venta: 199.99,
+            id_catalogo: 3,
+            id_categoria: 71,
+            inventario: {
+                cantidad_stock: 55
+            }
+        },
+        {
+            id_producto: 72,
+            talla: "S",
+            color: "Blanco",
+            nombre: "Vestido Corto",
+            descripcion: "Vestido corto blanco",
+            precio_compra: 250.00,
+            precio_venta: 399.99,
+            id_catalogo: 3,
+            id_categoria: 72,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 73,
+            talla: "XL",
+            color: "Azul",
+            nombre: "Mono",
+            descripcion: "Mono azul",
+            precio_compra: 300.00,
+            precio_venta: 499.99,
+            id_catalogo: 3,
+            id_categoria: 73,
+            inventario: {
+                cantidad_stock: 20
+            }
+        },
+        {
+            id_producto: 74,
+            talla: "M",
+            color: "Rojo",
+            nombre: "Pantalón Cargo",
+            descripcion: "Pantalón cargo rojo",
+            precio_compra: 250.00,
+            precio_venta: 399.99,
+            id_catalogo: 3,
+            id_categoria: 74,
+            inventario: {
+                cantidad_stock: 35
+            }
+        },
+        {
+            id_producto: 75,
+            talla: "L",
+            color: "Negro",
+            nombre: "Leggings",
+            descripcion: "Leggings negros",
+            precio_compra: 150.00,
+            precio_venta: 249.99,
+            id_catalogo: 3,
+            id_categoria: 75,
+            inventario: {
+                cantidad_stock: 45
+            }
+        },
+        {
+            id_producto: 76,
+            talla: "S",
+            color: "Gris",
+            nombre: "Gorra",
+            descripcion: "Gorra gris",
+            precio_compra: 60.00,
+            precio_venta: 99.99,
+            id_catalogo: 3,
+            id_categoria: 76,
+            inventario: {
+                cantidad_stock: 60
+            }
+        },
+        {
+            id_producto: 77,
+            talla: "XL",
+            color: "Beige",
+            nombre: "Camiseta con Logo",
+            descripcion: "Camiseta beige con logo",
+            precio_compra: 100.00,
+            precio_venta: 199.99,
+            id_catalogo: 3,
+            id_categoria: 77,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 78,
+            talla: "M",
+            color: "Negro",
+            nombre: "Botines",
+            descripcion: "Botines negros de mujer",
+            precio_compra: 300.00,
+            precio_venta: 499.99,
+            id_catalogo: 3,
+            id_categoria: 78,
+            inventario: {
+                cantidad_stock: 15
+            }
+        },
+        {
+            id_producto: 79,
+            talla: "L",
+            color: "Verde",
+            nombre: "Zapatos de Tacón",
+            descripcion: "Zapatos de tacón verdes",
+            precio_compra: 500.00,
+            precio_venta: 799.99,
+            id_catalogo: 3,
+            id_categoria: 79,
+            inventario: {
+                cantidad_stock: 10
+            }
+        },
+        {
+            id_producto: 80,
+            talla: "S",
+            color: "Azul",
+            nombre: "Pantalón Deportivo",
+            descripcion: "Pantalón deportivo azul",
+            precio_compra: 220.00,
+            precio_venta: 349.99,
+            id_catalogo: 3,
+            id_categoria: 80,
+            inventario: {
+                cantidad_stock: 50
+            }
+        },
+        {
+            id_producto: 81,
+            talla: "XL",
+            color: "Rojo",
+            nombre: "Falda",
+            descripcion: "Falda roja",
+            precio_compra: 150.00,
+            precio_venta: 249.99,
+            id_catalogo: 3,
+            id_categoria: 81,
+            inventario: {
+                cantidad_stock: 40
+            }
+        },
+        {
+            id_producto: 82,
+            talla: "M",
+            color: "Negro",
+            nombre: "Pantalón de Vestir",
+            descripcion: "Pantalón de vestir negro",
+            precio_compra: 350.00,
+            precio_venta: 599.99,
+            id_catalogo: 3,
+            id_categoria: 82,
+            inventario: {
+                cantidad_stock: 30
+            }
+        },
+        {
+            id_producto: 83,
+            talla: "L",
+            color: "Rosa",
+            nombre: "Vestido de Fiesta",
+            descripcion: "Vestido rosa de fiesta",
+            precio_compra: 500.00,
+            precio_venta: 800.00,
+            id_catalogo: 3,
+            id_categoria: 83,
+            inventario: {
+                cantidad_stock: 25
+            }
+        },
+        {
+            id_producto: 84,
+            talla: "S",
+            color: "Gris",
+            nombre: "Chaleco de Abrigo",
+            descripcion: "Chaleco de abrigo gris",
+            precio_compra: 400.00,
+            precio_venta: 600.00,
+            id_catalogo: 3,
+            id_categoria: 84,
+            inventario: {
+                cantidad_stock: 20
+            }
+        }
+        
+    ]);
+    
+    

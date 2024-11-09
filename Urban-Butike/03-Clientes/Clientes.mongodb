@@ -1,0 +1,45 @@
+//usar base de datos 
+use("Urban-Butike");
+
+// Colección: Clientes (Referenciada)
+// Referencia: Se usa en la colección `venta` para asociar cada venta con un cliente.
+db.createCollection("clientes", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validación del objeto cliente',
+            required: ['id_cliente', 'nombre', 'apellidos', 'tel', 'direccion', 'email'],
+            properties: {
+                id_cliente: {
+                    bsonType: 'int',
+                    description: 'ID único del cliente',
+                },
+                nombre: {
+                    bsonType: 'string',
+                    description: 'Nombre del cliente',
+                    pattern: "^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\s,]+$"
+                },
+                apellidos: {
+                    bsonType: 'string',
+                    description: 'Apellidos del cliente',
+                    pattern: "^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\s,]+$"
+                },
+                tel: {
+                    bsonType: 'string',
+                    description: 'Teléfono de contacto del cliente',
+                    pattern: "^[\d-]+$"
+                },
+                direccion: {
+                    bsonType: 'string',
+                    description: 'Dirección del cliente',
+                    pattern: "^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\s,]+$"
+                },
+                email: {
+                    bsonType: 'string',
+                    description: 'Correo electrónico del cliente',
+                    pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                }
+            }
+        }
+    }
+});

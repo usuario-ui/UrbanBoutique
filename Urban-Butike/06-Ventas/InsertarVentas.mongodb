@@ -1,0 +1,667 @@
+use("Urban-Butike");
+
+db.venta.insertMany([
+    {
+        id_venta: 1,
+        fecha_venta: new Date("2024-01-01"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1001,
+        productos: [
+            { id_producto: 1, cantidad: 2, precio: 100.00 },
+            { id_producto: 2, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 1, fecha_abono: new Date("2024-01-02"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 2,
+        fecha_venta: new Date("2024-01-02"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1002,
+        productos: [
+            { id_producto: 3, cantidad: 1, precio: 100.00 },
+            { id_producto: 4, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 2, fecha_abono: new Date("2024-01-03"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 3,
+        fecha_venta: new Date("2024-01-03"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1003,
+        productos: [
+            { id_producto: 5, cantidad: 1, precio: 100.00 },
+            { id_producto: 6, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 3, fecha_abono: new Date("2024-01-04"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 4,
+        fecha_venta: new Date("2024-01-04"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1004,
+        productos: [
+            { id_producto: 7, cantidad: 2, precio: 100.00 },
+            { id_producto: 8, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 4, fecha_abono: new Date("2024-01-05"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 5,
+        fecha_venta: new Date("2024-01-05"),
+        num_productos: 1,
+        total_venta: 100.00,
+        id_cliente: 1005,
+        productos: [
+            { id_producto: 9, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 5, fecha_abono: new Date("2024-01-06"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 6,
+        fecha_venta: new Date("2024-01-06"),
+        num_productos: 6,
+        total_venta: 600.00,
+        id_cliente: 1006,
+        productos: [
+            { id_producto: 10, cantidad: 3, precio: 100.00 },
+            { id_producto: 11, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 6, fecha_abono: new Date("2024-01-07"), cantidad_faltante: 100.00 }
+        ]
+    },
+    {
+        id_venta: 7,
+        fecha_venta: new Date("2024-01-07"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1007,
+        productos: [
+            { id_producto: 12, cantidad: 1, precio: 100.00 },
+            { id_producto: 13, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 7, fecha_abono: new Date("2024-01-08"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 8,
+        fecha_venta: new Date("2024-01-08"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1008,
+        productos: [
+            { id_producto: 14, cantidad: 3, precio: 100.00 },
+            { id_producto: 15, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 8, fecha_abono: new Date("2024-01-09"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 9,
+        fecha_venta: new Date("2024-01-09"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1009,
+        productos: [
+            { id_producto: 16, cantidad: 1, precio: 100.00 },
+            { id_producto: 17, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 9, fecha_abono: new Date("2024-01-10"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 10,
+        fecha_venta: new Date("2024-01-10"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1010,
+        productos: [
+            { id_producto: 18, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 10, fecha_abono: new Date("2024-01-11"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 11,
+        fecha_venta: new Date("2024-01-11"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1011,
+        productos: [
+            { id_producto: 19, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 11, fecha_abono: new Date("2024-01-12"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 12,
+        fecha_venta: new Date("2024-01-12"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1012,
+        productos: [
+            { id_producto: 20, cantidad: 2, precio: 100.00 },
+            { id_producto: 21, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 12, fecha_abono: new Date("2024-01-13"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 13,
+        fecha_venta: new Date("2024-01-13"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1013,
+        productos: [
+            { id_producto: 22, cantidad: 1, precio: 100.00 },
+            { id_producto: 23, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 13, fecha_abono: new Date("2024-01-14"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 14,
+        fecha_venta: new Date("2024-01-14"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1014,
+        productos: [
+            { id_producto: 24, cantidad: 2, precio: 100.00 },
+            { id_producto: 25, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 14, fecha_abono: new Date("2024-01-15"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 15,
+        fecha_venta: new Date("2024-01-15"),
+        num_productos: 1,
+        total_venta: 100.00,
+        id_cliente: 1015,
+        productos: [
+            { id_producto: 26, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 15, fecha_abono: new Date("2024-01-16"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 16,
+        fecha_venta: new Date("2024-01-16"),
+        num_productos: 6,
+        total_venta: 600.00,
+        id_cliente: 1016,
+        productos: [
+            { id_producto: 27, cantidad: 3, precio: 100.00 },
+            { id_producto: 28, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 16, fecha_abono: new Date("2024-01-17"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 17,
+        fecha_venta: new Date("2024-01-17"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1017,
+        productos: [
+            { id_producto: 29, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 17, fecha_abono: new Date("2024-01-18"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 18,
+        fecha_venta: new Date("2024-01-18"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1018,
+        productos: [
+            { id_producto: 30, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 18, fecha_abono: new Date("2024-01-19"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 19,
+        fecha_venta: new Date("2024-01-19"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1019,
+        productos: [
+            { id_producto: 31, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 19, fecha_abono: new Date("2024-01-20"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 20,
+        fecha_venta: new Date("2024-01-20"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1020,
+        productos: [
+            { id_producto: 32, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 20, fecha_abono: new Date("2024-01-21"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 21,
+        fecha_venta: new Date("2024-01-21"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1021,
+        productos: [
+            { id_producto: 33, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 21, fecha_abono: new Date("2024-01-22"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 22,
+        fecha_venta: new Date("2024-01-22"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1022,
+        productos: [
+            { id_producto: 34, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 22, fecha_abono: new Date("2024-01-23"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 23,
+        fecha_venta: new Date("2024-01-23"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1023,
+        productos: [
+            { id_producto: 35, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 23, fecha_abono: new Date("2024-01-24"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 24,
+        fecha_venta: new Date("2024-01-24"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1024,
+        productos: [
+            { id_producto: 36, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 24, fecha_abono: new Date("2024-01-25"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 25,
+        fecha_venta: new Date("2024-01-25"),
+        num_productos: 1,
+        total_venta: 100.00,
+        id_cliente: 1025,
+        productos: [
+            { id_producto: 37, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 25, fecha_abono: new Date("2024-01-26"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 26,
+        fecha_venta: new Date("2024-01-26"),
+        num_productos: 6,
+        total_venta: 600.00,
+        id_cliente: 1026,
+        productos: [
+            { id_producto: 38, cantidad: 6, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 26, fecha_abono: new Date("2024-01-27"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 27,
+        fecha_venta: new Date("2024-01-27"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1027,
+        productos: [
+            { id_producto: 39, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 27, fecha_abono: new Date("2024-01-28"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 28,
+        fecha_venta: new Date("2024-01-28"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1028,
+        productos: [
+            { id_producto: 40, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 28, fecha_abono: new Date("2024-01-29"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 29,
+        fecha_venta: new Date("2024-01-29"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1029,
+        productos: [
+            { id_producto: 41, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 29, fecha_abono: new Date("2024-01-30"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 30,
+        fecha_venta: new Date("2024-01-30"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1030,
+        productos: [
+            { id_producto: 42, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 30, fecha_abono: new Date("2024-01-31"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 31,
+        fecha_venta: new Date("2024-01-31"),
+        num_productos: 1,
+        total_venta: 100.00,
+        id_cliente: 1031,
+        productos: [
+            { id_producto: 43, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 31, fecha_abono: new Date("2024-02-01"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 32,
+        fecha_venta: new Date("2024-02-01"),
+        num_productos: 6,
+        total_venta: 600.00,
+        id_cliente: 1032,
+        productos: [
+            { id_producto: 44, cantidad: 6, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 32, fecha_abono: new Date("2024-02-02"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 33,
+        fecha_venta: new Date("2024-02-02"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1033,
+        productos: [
+            { id_producto: 45, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 33, fecha_abono: new Date("2024-02-03"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 34,
+        fecha_venta: new Date("2024-02-03"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1034,
+        productos: [
+            { id_producto: 46, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 34, fecha_abono: new Date("2024-02-04"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 35,
+        fecha_venta: new Date("2024-02-04"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1035,
+        productos: [
+            { id_producto: 47, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 35, fecha_abono: new Date("2024-02-05"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 36,
+        fecha_venta: new Date("2024-02-05"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1036,
+        productos: [
+            { id_producto: 48, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 36, fecha_abono: new Date("2024-02-06"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 37,
+        fecha_venta: new Date("2024-02-06"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1037,
+        productos: [
+            { id_producto: 49, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 37, fecha_abono: new Date("2024-02-07"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 38,
+        fecha_venta: new Date("2024-02-07"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1038,
+        productos: [
+            { id_producto: 50, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 38, fecha_abono: new Date("2024-02-08"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 39,
+        fecha_venta: new Date("2024-02-08"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1039,
+        productos: [
+            { id_producto: 51, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 39, fecha_abono: new Date("2024-02-09"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 40,
+        fecha_venta: new Date("2024-02-09"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1040,
+        productos: [
+            { id_producto: 52, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 40, fecha_abono: new Date("2024-02-10"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 41,
+        fecha_venta: new Date("2024-02-10"),
+        num_productos: 1,
+        total_venta: 100.00,
+        id_cliente: 1041,
+        productos: [
+            { id_producto: 53, cantidad: 1, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 41, fecha_abono: new Date("2024-02-11"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 42,
+        fecha_venta: new Date("2024-02-11"),
+        num_productos: 6,
+        total_venta: 600.00,
+        id_cliente: 1042,
+        productos: [
+            { id_producto: 54, cantidad: 6, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 42, fecha_abono: new Date("2024-02-12"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 43,
+        fecha_venta: new Date("2024-02-12"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1043,
+        productos: [
+            { id_producto: 55, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 43, fecha_abono: new Date("2024-02-13"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 44,
+        fecha_venta: new Date("2024-02-13"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1044,
+        productos: [
+            { id_producto: 56, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 44, fecha_abono: new Date("2024-02-14"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 45,
+        fecha_venta: new Date("2024-02-14"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1045,
+        productos: [
+            { id_producto: 57, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 45, fecha_abono: new Date("2024-02-15"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 46,
+        fecha_venta: new Date("2024-02-15"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1046,
+        productos: [
+            { id_producto: 58, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 46, fecha_abono: new Date("2024-02-16"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 47,
+        fecha_venta: new Date("2024-02-16"),
+        num_productos: 2,
+        total_venta: 200.00,
+        id_cliente: 1047,
+        productos: [
+            { id_producto: 59, cantidad: 2, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 47, fecha_abono: new Date("2024-02-17"), cantidad_faltante: 50.00 }
+        ]
+    },
+    {
+        id_venta: 48,
+        fecha_venta: new Date("2024-02-17"),
+        num_productos: 5,
+        total_venta: 500.00,
+        id_cliente: 1048,
+        productos: [
+            { id_producto: 60, cantidad: 5, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 48, fecha_abono: new Date("2024-02-18"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 49,
+        fecha_venta: new Date("2024-02-18"),
+        num_productos: 3,
+        total_venta: 300.00,
+        id_cliente: 1049,
+        productos: [
+            { id_producto: 61, cantidad: 3, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 49, fecha_abono: new Date("2024-02-19"), cantidad_faltante: 0.00 }
+        ]
+    },
+    {
+        id_venta: 50,
+        fecha_venta: new Date("2024-02-19"),
+        num_productos: 4,
+        total_venta: 400.00,
+        id_cliente: 1050,
+        productos: [
+            { id_producto: 62, cantidad: 4, precio: 100.00 }
+        ],
+        abonos: [
+            { id_abono: 50, fecha_abono: new Date("2024-02-20"), cantidad_faltante: 50.00 }
+        ]
+    }
+     
+]);

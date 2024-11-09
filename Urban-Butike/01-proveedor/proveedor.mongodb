@@ -1,0 +1,38 @@
+// Usar la base de datos
+use("Urban-Butike");
+
+db.createCollection("proveedore", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['id_proveedor', 'nombre', 'apellidos', 'tel', 'direccion', 'email', 'contacto'],
+            properties: {
+                id_proveedor: { 
+                    bsonType: 'int'
+                },
+                nombre: { 
+                    bsonType: 'string', 
+                    pattern: "^[a-zA-Z\\s]+$" 
+                },
+                apellidos: { 
+                    bsonType: 'string',
+                    pattern: "^[a-zA-Z\\s]+$" 
+                },
+                tel: { 
+                    bsonType: 'string', 
+                    pattern: "^\\d{10}$" 
+                },
+                direccion: { 
+                    bsonType: 'string' 
+                },
+                email: { 
+                    bsonType: 'string', 
+                    pattern: "^[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}$" 
+                },
+                contacto: { 
+                    bsonType: 'string'
+                 }
+            }
+        }
+    }
+});

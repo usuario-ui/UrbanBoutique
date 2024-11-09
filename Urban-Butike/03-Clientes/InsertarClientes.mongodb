@@ -1,0 +1,405 @@
+use("Urban-Butike");
+db.clientes.insertMany(
+    [
+        {
+            "id_cliente": 1,
+            "nombre": "Cliente 1",
+             "apellidos": "Apellido 1",
+            "tel": "555-1111",
+            "direccion": "Calle 1, Ciudad",
+            "email": "cliente1@example.com"
+        },
+        {
+            "id_cliente": 2,
+            "nombre": "Cliente 2",
+            "apellidos": "Apellido 2",
+            "tel": "555-2222",
+            "direccion": "Calle 2, Ciudad",
+            "email": "cliente2@example.com"
+        },
+        {
+            "id_cliente": 3,
+            "nombre": "Cliente 3",
+            "apellidos": "Apellido 3",
+            "tel": "555-3333",
+            "direccion": "Calle 3, Ciudad",
+            "email": "cliente3@example.com"
+        },
+        {
+            "id_cliente": 4,
+            "nombre": "Cliente 4",
+            "apellidos": "Apellido 4",
+            "tel": "555-4444",
+            "direccion": "Calle 4, Ciudad",
+            "email": "cliente4@example.com"
+        },
+        {
+            "id_cliente": 5,
+            "nombre": "Cliente 5",
+            "apellidos": "Apellido 5",
+            "tel": "555-5555",
+            "direccion": "Calle 5, Ciudad",
+            "email": "cliente5@example.com"
+        },
+        {
+            "id_cliente": 6,
+            "nombre": "Cliente 6",
+            "apellidos": "Apellido 6",
+            "tel": "555-6666",
+            "direccion": "Calle 6, Ciudad",
+            "email": "cliente6@example.com"
+        },
+        {
+            "id_cliente": 7,
+            "nombre": "Cliente 7",
+            "apellidos": "Apellido 7",
+            "tel": "555-7777",
+            "direccion": "Calle 7, Ciudad",
+            "email": "cliente7@example.com"
+        },
+        {
+            "id_cliente": 8,
+            "nombre": "Cliente 8",
+            "apellidos": "Apellido 8",
+            "tel": "555-8888",
+            "direccion": "Calle 8, Ciudad",
+            "email": "cliente8@example.com"
+        },
+        {
+            "id_cliente": 9,
+            "nombre": "Cliente 9",
+            "apellidos": "Apellido 9",
+            "tel": "555-9999",
+            "direccion": "Calle 9, Ciudad",
+            "email": "cliente9@example.com"
+        },
+        {
+            "id_cliente": 10,
+            "nombre": "Cliente 10",
+            "apellidos": "Apellido 10",
+            "tel": "555-0000",
+            "direccion": "Calle 10, Ciudad",
+            "email": "cliente10@example.com"
+        },
+        {
+            "id_cliente": 11,
+            "nombre": "Cliente 11",
+            "apellidos": "Apellido 11",
+            "tel": "555-1111",
+            "direccion": "Calle 11, Ciudad",
+            "email": "cliente11@example.com"
+        },
+        {
+            "id_cliente": 12,
+            "nombre": "Cliente 12",
+            "apellidos": "Apellido 12",
+            "tel": "555-2222",
+            "direccion": "Calle 12, Ciudad",
+            "email": "cliente12@example.com"
+        },
+        {
+            "id_cliente": 13,
+            "nombre": "Cliente 13",
+            "apellidos": "Apellido 13",
+            "tel": "555-3333",
+            "direccion": "Calle 13, Ciudad",
+            "email": "cliente13@example.com"
+        },
+        {
+            "id_cliente": 14,
+            "nombre": "Cliente 14",
+            "apellidos": "Apellido 14",
+            "tel": "555-4444",
+            "direccion": "Calle 14, Ciudad",
+            "email": "cliente14@example.com"
+        },
+        {
+            "id_cliente": 15,
+            "nombre": "Cliente 15",
+            "apellidos": "Apellido 15",
+            "tel": "555-5555",
+            "direccion": "Calle 15, Ciudad",
+            "email": "cliente15@example.com"
+        },
+        {
+            "id_cliente": 16,
+            "nombre": "Cliente 16",
+            "apellidos": "Apellido 16",
+            "tel": "555-6666",
+            "direccion": "Calle 16, Ciudad",
+            "email": "cliente16@example.com"
+        },
+        {
+            "id_cliente": 17,
+            "nombre": "Cliente 17",
+            "apellidos": "Apellido 17",
+            "tel": "555-7777",
+            "direccion": "Calle 17, Ciudad",
+            "email": "cliente17@example.com"
+        },
+        {
+            "id_cliente": 18,
+            "nombre": "Cliente 18",
+            "apellidos": "Apellido 18",
+            "tel": "555-8888",
+            "direccion": "Calle 18, Ciudad",
+            "email": "cliente18@example.com"
+        },
+        {
+            "id_cliente": 19,
+            "nombre": "Cliente 19",
+            "apellidos": "Apellido 19",
+            "tel": "555-9999",
+            "direccion": "Calle 19, Ciudad",
+            "email": "cliente19@example.com"
+        },
+        {
+            "id_cliente": 20,
+            "nombre": "Cliente 20",
+            "apellidos": "Apellido 20",
+            "tel": "555-0000",
+            "direccion": "Calle 20, Ciudad",
+            "email": "cliente20@example.com"
+        },
+        {
+            "id_cliente": 21,
+            "nombre": "Cliente 21",
+            "apellidos": "Apellido 21",
+            "tel": "555-1111",
+            "direccion": "Calle 21, Ciudad",
+            "email": "cliente21@example.com"
+        },
+        {
+            "id_cliente": 22,
+            "nombre": "Cliente 22",
+            "apellidos": "Apellido 22",
+            "tel": "555-2222",
+            "direccion": "Calle 22, Ciudad",
+            "email": "cliente22@example.com"
+        },
+        {
+            "id_cliente": 23,
+            "nombre": "Cliente 23",
+            "apellidos": "Apellido 23",
+            "tel": "555-3333",
+            "direccion": "Calle 23, Ciudad",
+            "email": "cliente23@example.com"
+        },
+        {
+            "id_cliente": 24,
+            "nombre": "Cliente 24",
+            "apellidos": "Apellido 24",
+            "tel": "555-4444",
+            "direccion": "Calle 24, Ciudad",
+            "email": "cliente24@example.com"
+        },
+        {
+            "id_cliente": 25,
+            "nombre": "Cliente 25",
+            "apellidos": "Apellido 25",
+            "tel": "555-5555",
+            "direccion": "Calle 25, Ciudad",
+            "email": "cliente25@example.com"
+        },
+        {
+            "id_cliente": 26,
+            "nombre": "Cliente 26",
+            "apellidos": "Apellido 26",
+            "tel": "555-6666",
+            "direccion": "Calle 26, Ciudad",
+            "email": "cliente26@example.com"
+        },
+        {
+            "id_cliente": 27,
+            "nombre": "Cliente 27",
+            "apellidos": "Apellido 27",
+            "tel": "555-7777",
+            "direccion": "Calle 27, Ciudad",
+            "email": "cliente27@example.com"
+        },
+        {
+            "id_cliente": 28,
+            "nombre": "Cliente 28",
+            "apellidos": "Apellido 28",
+            "tel": "555-8888",
+            "direccion": "Calle 28, Ciudad",
+            "email": "cliente28@example.com"
+        },
+        {
+            "id_cliente": 29,
+            "nombre": "Cliente 29",
+            "apellidos": "Apellido 29",
+            "tel": "555-9999",
+            "direccion": "Calle 29, Ciudad",
+            "email": "cliente29@example.com"
+        },
+        {
+            "id_cliente": 30,
+            "nombre": "Cliente 30",
+            "apellidos": "Apellido 30",
+            "tel": "555-0000",
+            "direccion": "Calle 30, Ciudad",
+            "email": "cliente30@example.com"
+        },
+        {
+            "id_cliente": 31,
+            "nombre": "Cliente 31",
+            "apellidos": "Apellido 31",
+            "tel": "555-1111",
+            "direccion": "Calle 31, Ciudad",
+            "email": "cliente31@example.com"
+        },
+        {
+            "id_cliente": 32,
+            "nombre": "Cliente 32",
+            "apellidos": "Apellido 32",
+            "tel": "555-2222",
+            "direccion": "Calle 32, Ciudad",
+            "email": "cliente32@example.com"
+        },
+        {
+            "id_cliente": 33,
+            "nombre": "Cliente 33",
+            "apellidos": "Apellido 33",
+            "tel": "555-3333",
+            "direccion": "Calle 33, Ciudad",
+            "email": "cliente33@example.com"
+        },
+        {
+            "id_cliente": 34,
+            "nombre": "Cliente 34",
+            "apellidos": "Apellido 34",
+            "tel": "555-4444",
+            "direccion": "Calle 34, Ciudad",
+            "email": "cliente34@example.com"
+        },
+        {
+            "id_cliente": 35,
+            "nombre": "Cliente 35",
+            "apellidos": "Apellido 35",
+            "tel": "555-5555",
+            "direccion": "Calle 35, Ciudad",
+            "email": "cliente35@example.com"
+        },
+        {
+            "id_cliente": 36,
+            "nombre": "Cliente 36",
+            "apellidos": "Apellido 36",
+            "tel": "555-6666",
+            "direccion": "Calle 36, Ciudad",
+            "email": "cliente36@example.com"
+        },
+        {
+            "id_cliente": 37,
+            "nombre": "Cliente 37",
+            "apellidos": "Apellido 37",
+            "tel": "555-7777",
+            "direccion": "Calle 37, Ciudad",
+            "email": "cliente37@example.com"
+        },
+        {
+            "id_cliente": 38,
+            "nombre": "Cliente 38",
+            "apellidos": "Apellido 38",
+            "tel": "555-8888",
+            "direccion": "Calle 38, Ciudad",
+            "email": "cliente38@example.com"
+        },
+        {
+            "id_cliente": 39,
+            "nombre": "Cliente 39",
+            "apellidos": "Apellido 39",
+            "tel": "555-9999",
+            "direccion": "Calle 39, Ciudad",
+            "email": "cliente39@example.com"
+        },
+        {
+            "id_cliente": 40,
+            "nombre": "Cliente 40",
+            "apellidos": "Apellido 40",
+            "tel": "555-0000",
+            "direccion": "Calle 40, Ciudad",
+            "email": "cliente40@example.com"
+        },
+        {
+            "id_cliente": 41,
+            "nombre": "Cliente 41",
+            "apellidos": "Apellido 41",
+            "tel": "555-1111",
+            "direccion": "Calle 41, Ciudad",
+            "email": "cliente41@example.com"
+        },
+        {
+            "id_cliente": 42,
+            "nombre": "Cliente 42",
+            "apellidos": "Apellido 42",
+            "tel": "555-2222",
+            "direccion": "Calle 42, Ciudad",
+            "email": "cliente42@example.com"
+        },
+        {
+            "id_cliente": 43,
+            "nombre": "Cliente 43",
+            "apellidos": "Apellido 43",
+            "tel": "555-3333",
+            "direccion": "Calle 43, Ciudad",
+            "email": "cliente43@example.com"
+        },
+        {
+            "id_cliente": 44,
+            "nombre": "Cliente 44",
+            "apellidos": "Apellido 44",
+            "tel": "555-4444",
+            "direccion": "Calle 44, Ciudad",
+            "email": "cliente44@example.com"
+        },
+        {
+            "id_cliente": 45,
+            "nombre": "Cliente 45",
+            "apellidos": "Apellido 45",
+            "tel": "555-5555",
+            "direccion": "Calle 45, Ciudad",
+            "email": "cliente45@example.com"
+        },
+        {
+            "id_cliente": 46,
+            "nombre": "Cliente 46",
+            "apellidos": "Apellido 46",
+            "tel": "555-6666",
+            "direccion": "Calle 46, Ciudad",
+            "email": "cliente46@example.com"
+        },
+        {
+            "id_cliente": 47,
+            "nombre": "Cliente 47",
+            "apellidos": "Apellido 47",
+            "tel": "555-7777",
+            "direccion": "Calle 47, Ciudad",
+            "email": "cliente47@example.com"
+        },
+        {
+            "id_cliente": 48,
+            "nombre": "Cliente 48",
+            "apellidos": "Apellido 48",
+            "tel": "555-8888",
+            "direccion": "Calle 48, Ciudad",
+            "email": "cliente48@example.com"
+        },
+        {
+            "id_cliente": 49,
+            "nombre": "Cliente 49",
+            "apellidos": "Apellido 49",
+            "tel": "555-9999",
+            "direccion": "Calle 49, Ciudad",
+            "email": "cliente49@example.com"
+        },
+        {
+            "id_cliente": 50,
+            "nombre": "Cliente 50",
+            "apellidos": "Apellido 50",
+            "tel": "555-0000",
+            "direccion": "Calle 50, Ciudad",
+            "email": "cliente50@example.com"
+        }
+    ]
+);

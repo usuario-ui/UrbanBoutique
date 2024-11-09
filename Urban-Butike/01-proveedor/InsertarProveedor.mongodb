@@ -1,0 +1,454 @@
+// Usar la base de datos
+use("Urban-Butike");
+
+db.proveedor.insertMany([
+    {
+        id_proveedor: 1,
+        nombre: "Juan",
+        apellidos: "Pérez",
+        tel: "5551234567",
+        direccion: "Av. Principal 123",
+        email: "juan.perez@example.com",
+        contacto: "Juan"
+    },
+    {
+        id_proveedor: 2,
+        nombre: "Marta",
+        apellidos: "González",
+        tel: "5559876543",
+        direccion: "Calle Secundaria 45",
+        email: "marta.gonzalez@example.com",
+        contacto: "Lucía"
+    },
+    {
+        id_proveedor: 3,
+        nombre: "Carlos",
+        apellidos: "Ramírez",
+        tel: "5552345678",
+        direccion: "Blvd. Independencia 67",
+        email: "carlos.ramirez@example.com",
+        contacto: "Pedro"
+    },
+    {
+        id_proveedor: 4,
+        nombre: "Ana",
+        apellidos: "Sánchez",
+        tel: "5553456789",
+        direccion: "Paseo de la Reforma 89",
+        email: "ana.sanchez@example.com",
+        contacto: "José"
+    },
+    {
+        id_proveedor: 5,
+        nombre: "Luis",
+        apellidos: "Fernández",
+        tel: "5554567890",
+        direccion: "Calle del Sol 101",
+        email: "luis.fernandez@example.com",
+        contacto: "Sofía"
+    },
+    {
+        id_proveedor: 6,
+        nombre: "Laura",
+        apellidos: "Cruz",
+        tel: "5555678901",
+        direccion: "Calle Luna 202",
+        email: "laura.cruz@example.com",
+        contacto: "Ricardo"
+    },
+    {
+        id_proveedor: 7,
+        nombre: "Jorge",
+        apellidos: "Jiménez",
+        tel: "5556789012",
+        direccion: "Calle Tierra 303",
+        email: "jorge.jimenez@example.com",
+        contacto: "Verónica"
+    },
+    {
+        id_proveedor: 8,
+        nombre: "Patricia",
+        apellidos: "Díaz",
+        tel: "5557890123",
+        direccion: "Calle Agua 404",
+        email: "patricia.diaz@example.com",
+        contacto: "Andrés"
+    },
+    {
+        id_proveedor: 9,
+        nombre: "Mario",
+        apellidos: "Torres",
+        tel: "5558901234",
+        direccion: "Calle Viento 505",
+        email: "mario.torres@example.com",
+        contacto: "Isabel"
+    },
+    {
+        id_proveedor: 10,
+        nombre: "Elena",
+        apellidos: "Morales",
+        tel: "5559012345",
+        direccion: "Calle Fuego 606",
+        email: "elena.morales@example.com",
+        contacto: "Esteban"
+    },
+    {
+        id_proveedor: 11,
+        nombre: "Fernando",
+        apellidos: "Rojas",
+        tel: "5550123456",
+        direccion: "Calle Nieve 707",
+        email: "fernando.rojas@example.com",
+        contacto: "Carolina"
+    },
+    {
+        id_proveedor: 12,
+        nombre: "Jessica",
+        apellidos: "Salazar",
+        tel: "5551234560",
+        direccion: "Calle Mar 808",
+        email: "jessica.salazar@example.com",
+        contacto: "Sergio"
+    },
+    {
+        id_proveedor: 13,
+        nombre: "Ricardo",
+        apellidos: "Vega",
+        tel: "5552345671",
+        direccion: "Calle Tierra 909",
+        email: "ricardo.vega@example.com",
+        contacto: "Natalia"
+    },
+    {
+        id_proveedor: 14,
+        nombre: "Camila",
+        apellidos: "Ríos",
+        tel: "5553456782",
+        direccion: "Calle Sol 101",
+        email: "camila.rios@example.com",
+        contacto: "Guillermo"
+    },
+    {
+        id_proveedor: 15,
+        nombre: "Andrés",
+        apellidos: "Paredes",
+        tel: "5554567893",
+        direccion: "Calle Luna 202",
+        email: "andres.paredes@example.com",
+        contacto: "Monica"
+    },
+    {
+        id_proveedor: 16,
+        nombre: "Angela",
+        apellidos: "Castillo",
+        tel: "5555678904",
+        direccion: "Calle del Río 303",
+        email: "angela.castillo@example.com",
+        contacto: "Roberto"
+    },
+    {
+        id_proveedor: 17,
+        nombre: "Victor",
+        apellidos: "Mendoza",
+        tel: "5556789015",
+        direccion: "Calle de la Paz 404",
+        email: "victor.mendoza@example.com",
+        contacto: "Teresa"
+    },
+    {
+        id_proveedor: 18,
+        nombre: "Liliana",
+        apellidos: "Bermúdez",
+        tel: "5557890126",
+        direccion: "Calle de la Luna 505",
+        email: "liliana.bermudez@example.com",
+        contacto: "Alberto"
+    },
+    {
+        id_proveedor: 19,
+        nombre: "Santiago",
+        apellidos: "Cordero",
+        tel: "5558901237",
+        direccion: "Calle del Viento 606",
+        email: "santiago.cordero@example.com",
+        contacto: "María"
+    },
+    {
+        id_proveedor: 20,
+        nombre: "Silvia",
+        apellidos: "Gómez",
+        tel: "5559012348",
+        direccion: "Calle del Sol 707",
+        email: "silvia.gomez@example.com",
+        contacto: "Eduardo"
+    },
+    {
+        id_proveedor: 21,
+        nombre: "Gustavo",
+        apellidos: "Rivas",
+        tel: "5550123459",
+        direccion: "Calle del Mar 808",
+        email: "gustavo.rivas@example.com",
+        contacto: "Laura"
+    },
+    {
+        id_proveedor: 22,
+        nombre: "Laura",
+        apellidos: "Silva",
+        tel: "5551234567",
+        direccion: "Calle de la Esperanza 909",
+        email: "laura.silva@example.com",
+        contacto: "Fernando"
+    },
+    {
+        id_proveedor: 23,
+        nombre: "Martin",
+        apellidos: "Palacios",
+        tel: "5552345678",
+        direccion: "Calle del Amor 101",
+        email: "martin.palacios@example.com",
+        contacto: "Cristina"
+    },
+    {
+        id_proveedor: 24,
+        nombre: "Nicolas",
+        apellidos: "Duarte",
+        tel: "5553456789",
+        direccion: "Calle de la Amistad 202",
+        email: "nicolas.duarte@example.com",
+        contacto: "Gabriela"
+    },
+    {
+        id_proveedor: 25,
+        nombre: "Marisol",
+        apellidos: "Castañeda",
+        tel: "5554567890",
+        direccion: "Calle del Éxito 303",
+        email: "marisol.castaneda@example.com",
+        contacto: "David"
+    },
+    {
+        id_proveedor: 26,
+        nombre: "Joaquín",
+        apellidos: "Salinas",
+        tel: "5555678901",
+        direccion: "Calle de la Felicidad 404",
+        email: "joaquin.salinas@example.com",
+        contacto: "Carla"
+    },
+    {
+        id_proveedor: 27,
+        nombre: "Natalia",
+        apellidos: "León",
+        tel: "5556789012",
+        direccion: "Calle de la Libertad 505",
+        email: "natalia.leon@example.com",
+        contacto: "Martín"
+    },
+    {
+        id_proveedor: 28,
+        nombre: "Rodrigo",
+        apellidos: "Ramos",
+        tel: "5557890123",
+        direccion: "Calle de la Vida 606",
+        email: "rodrigo.ramos@example.com",
+        contacto: "Verónica"
+    },
+    {
+        id_proveedor: 29,
+        nombre: "Cecilia",
+        apellidos: "Moreno",
+        tel: "5558901234",
+        direccion: "Calle de la Fuerza 707",
+        email: "cecilia.moreno@example.com",
+        contacto: "Marco"
+    },
+    {
+        id_proveedor: 30,
+        nombre: "Lourdes",
+        apellidos: "Hernández",
+        tel: "5559012345",
+        direccion: "Calle de la Armonía 808",
+        email: "lourdes.hernandez@example.com",
+        contacto: "Diana"
+    },
+    {
+        id_proveedor: 31,
+        nombre: "Roberto",
+        apellidos: "Soto",
+        tel: "5550123456",
+        direccion: "Calle de la Pasión 909",
+        email: "roberto.soto@example.com",
+        contacto: "Claudia"
+    },
+    {
+        id_proveedor: 32,
+        nombre: "Esteban",
+        apellidos: "Aguirre",
+        tel: "5551234560",
+        direccion: "Calle de la Sorpresa 101",
+        email: "esteban.aguirre@example.com",
+        contacto: "Jazmín"
+    },
+    {
+        id_proveedor: 33,
+        nombre: "Inés",
+        apellidos: "Núñez",
+        tel: "5552345671",
+        direccion: "Calle de la Esperanza 202",
+        email: "ines.nunez@example.com",
+        contacto: "Alejandro"
+    },
+    {
+        id_proveedor: 34,
+        nombre: "Lia",
+        apellidos: "Peña",
+        tel: "5553456782",
+        direccion: "Calle de la Belleza 303",
+        email: "lia.pena@example.com",
+        contacto: "Samuel"
+    },
+    {
+        id_proveedor: 35,
+        nombre: "Leonardo",
+        apellidos: "Zamora",
+        tel: "5554567893",
+        direccion: "Calle de la Amistad 404",
+        email: "leonardo.zamora@example.com",
+        contacto: "Patricia"
+    },
+    {
+        id_proveedor: 36,
+        nombre: "Soledad",
+        apellidos: "Bolaños",
+        tel: "5555678904",
+        direccion: "Calle de la Amistad 505",
+        email: "soledad.bolanos@example.com",
+        contacto: "Luis"
+    },
+    {
+        id_proveedor: 37,
+        nombre: "Silvio",
+        apellidos: "Espinosa",
+        tel: "5556789015",
+        direccion: "Calle del Océano 606",
+        email: "silvio.espinosa@example.com",
+        contacto: "Sofia"
+    },
+    {
+        id_proveedor: 38,
+        nombre: "Olga",
+        apellidos: "Pinto",
+        tel: "5557890126",
+        direccion: "Calle de la Armonía 707",
+        email: "olga.pinto@example.com",
+        contacto: "Roberto"
+    },
+    {
+        id_proveedor: 39,
+        nombre: "Samuel",
+        apellidos: "Mendoza",
+        tel: "5558901237",
+        direccion: "Calle de la Felicidad 808",
+        email: "samuel.mendoza@example.com",
+        contacto: "María"
+    },
+    {
+        id_proveedor: 40,
+        nombre: "Alberto",
+        apellidos: "Vazquez",
+        tel: "5559012348",
+        direccion: "Calle del Viento 909",
+        email: "alberto.vazquez@example.com",
+        contacto: "Natalia"
+    },
+    {
+        id_proveedor: 41,
+        nombre: "Julieta",
+        apellidos: "Araya",
+        tel: "5550123459",
+        direccion: "Calle de la Paz 101",
+        email: "julieta.araya@example.com",
+        contacto: "Fernando"
+    },{
+        id_proveedor: 42,
+        nombre: "Marta",
+        apellidos: "González",
+        tel: "5559876543",
+        direccion: "Calle Secundaria 45",
+        email: "marta.gonzalez@example.com",
+        contacto: "Lucía"
+    },
+    {
+        id_proveedor: 43,
+        nombre: "Carlos",
+        apellidos: "Ramírez",
+        tel: "5552345678",
+        direccion: "Blvd. Independencia 67",
+        email: "carlos.ramirez@example.com",
+        contacto: "Pedro"
+    },
+    {
+        id_proveedor: 44,
+        nombre: "Ana",
+        apellidos: "Sánchez",
+        tel: "5553456789",
+        direccion: "Paseo de la Reforma 89",
+        email: "ana.sanchez@example.com",
+        contacto: "José"
+    },
+    {
+        id_proveedor: 45,
+        nombre: "Luis",
+        apellidos: "Fernández",
+        tel: "5554567890",
+        direccion: "Calle del Sol 101",
+        email: "luis.fernandez@example.com",
+        contacto: "Sofía"
+    },
+    {
+        id_proveedor: 46,
+        nombre: "Laura",
+        apellidos: "Cruz",
+        tel: "5555678901",
+        direccion: "Calle Luna 202",
+        email: "laura.cruz@example.com",
+        contacto: "Ricardo"
+    },
+    {
+        id_proveedor: 47,
+        nombre: "Jorge",
+        apellidos: "Jiménez",
+        tel: "5556789012",
+        direccion: "Calle Tierra 303",
+        email: "jorge.jimenez@example.com",
+        contacto: "Verónica"
+    },
+    {
+        id_proveedor: 48,
+        nombre: "Patricia",
+        apellidos: "Díaz",
+        tel: "5557890123",
+        direccion: "Calle Agua 404",
+        email: "patricia.diaz@example.com",
+        contacto: "Andrés"
+    },
+    {
+        id_proveedor: 49,
+        nombre: "Mario",
+        apellidos: "Torres",
+        tel: "5558901234",
+        direccion: "Calle Viento 505",
+        email: "mario.torres@example.com",
+        contacto: "Isabel"
+    },
+    {
+        id_proveedor: 50,
+        nombre: "Elena",
+        apellidos: "Morales",
+        tel: "5559012345",
+        direccion: "Calle Fuego 606",
+        email: "elena.morales@example.com",
+        contacto: "Esteban"
+    }
+]);

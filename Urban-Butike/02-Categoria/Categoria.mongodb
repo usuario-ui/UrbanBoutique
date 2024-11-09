@@ -1,0 +1,27 @@
+//usar base de datos 
+use("Urban-Butike");
+
+// Colección: Categoría (Referenciada)
+// Referencia: Se usa en la colección `productos` para categorizar cada producto.
+db.createCollection("categoria", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validación del objeto categoría',
+            required: ['id_categoria', 'categoria'],
+            properties: {
+                id_categoria: {
+                    bsonType: 'int',
+                    description: 'ID único de la categoría'
+                },
+                categoria: {
+                    bsonType: 'string',
+                    description: 'Nombre de la categoría',
+                    pattern : "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+$"
+
+
+                }
+            }
+        }
+    }
+});

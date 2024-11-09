@@ -1,0 +1,713 @@
+use("Urban-Butike");
+db.compras.insertMany([
+    {
+        id_compra: 1,
+        total_productos: 5,
+        precio_unitario: 50.00,
+        precio_total: 250.00,
+        fecha: new Date("2024-01-01"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0001",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 1, cantidad: 2 },
+            { id_producto: 3, cantidad: 1 },
+            { id_producto: 5, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 2,
+        total_productos: 2,
+        precio_unitario: 100.00,
+        precio_total: 200.00,
+        fecha: new Date("2024-01-02"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0002",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 2, cantidad: 1 },
+            { id_producto: 4, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 3,
+        total_productos: 3,
+        precio_unitario: 75.00,
+        precio_total: 225.00,
+        fecha: new Date("2024-01-03"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0003",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 6, cantidad: 1 },
+            { id_producto: 7, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 4,
+        total_productos: 4,
+        precio_unitario: 60.00,
+        precio_total: 240.00,
+        fecha: new Date("2024-01-04"),
+        descuento: 15,
+        estatus: "Cancelada",
+        numero_compra: "COMP-0004",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 8, cantidad: 1 },
+            { id_producto: 10, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 5,
+        total_productos: 6,
+        precio_unitario: 45.00,
+        precio_total: 270.00,
+        fecha: new Date("2024-01-05"),
+        descuento: 20,
+        estatus: "Completada",
+        numero_compra: "COMP-0005",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 12, cantidad: 6 }
+        ]
+    },
+    {
+        id_compra: 6,
+        total_productos: 1,
+        precio_unitario: 120.00,
+        precio_total: 120.00,
+        fecha: new Date("2024-01-06"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0006",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 13, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 7,
+        total_productos: 3,
+        precio_unitario: 80.00,
+        precio_total: 240.00,
+        fecha: new Date("2024-01-07"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0007",
+        tipo_Pago: "Tarjeta de débito",
+        productos: [
+            { id_producto: 15, cantidad: 2 },
+            { id_producto: 16, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 8,
+        total_productos: 2,
+        precio_unitario: 90.00,
+        precio_total: 180.00,
+        fecha: new Date("2024-01-08"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0008",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 17, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 9,
+        total_productos: 5,
+        precio_unitario: 70.00,
+        precio_total: 350.00,
+        fecha: new Date("2024-01-09"),
+        descuento: 15,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0009",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 18, cantidad: 3 },
+            { id_producto: 19, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 10,
+        total_productos: 4,
+        precio_unitario: 55.00,
+        precio_total: 220.00,
+        fecha: new Date("2024-01-10"),
+        descuento: 0,
+        estatus: "Completada",
+        numero_compra: "COMP-0010",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 20, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 11,
+        total_productos: 3,
+        precio_unitario: 65.00,
+        precio_total: 195.00,
+        fecha: new Date("2024-01-11"),
+        descuento: 5,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0011",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 22, cantidad: 2 },
+            { id_producto: 23, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 12,
+        total_productos: 2,
+        precio_unitario: 130.00,
+        precio_total: 260.00,
+        fecha: new Date("2024-01-12"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0012",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 24, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 13,
+        total_productos: 6,
+        precio_unitario: 35.00,
+        precio_total: 210.00,
+        fecha: new Date("2024-01-13"),
+        descuento: 20,
+        estatus: "Completada",
+        numero_compra: "COMP-0013",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 25, cantidad: 3 },
+            { id_producto: 26, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 14,
+        total_productos: 1,
+        precio_unitario: 140.00,
+        precio_total: 140.00,
+        fecha: new Date("2024-01-14"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0014",
+        tipo_Pago: "Tarjeta de débito",
+        productos: [
+            { id_producto: 27, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 15,
+        total_productos: 3,
+        precio_unitario: 75.00,
+        precio_total: 225.00,
+        fecha: new Date("2024-01-15"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0015",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 28, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 16,
+        total_productos: 4,
+        precio_unitario: 50.00,
+        precio_total: 200.00,
+        fecha: new Date("2024-01-16"),
+        descuento: 15,
+        estatus: "Completada",
+        numero_compra: "COMP-0016",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 29, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 17,
+        total_productos: 5,
+        precio_unitario: 85.00,
+        precio_total: 425.00,
+        fecha: new Date("2024-01-17"),
+        descuento: 0,
+        estatus: "Cancelada",
+        numero_compra: "COMP-0017",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 30, cantidad: 5 }
+        ]
+    },
+    {
+        id_compra: 18,
+        total_productos: 2,
+        precio_unitario: 100.00,
+        precio_total: 200.00,
+        fecha: new Date("2024-01-18"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0018",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 31, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 19,
+        total_productos: 3,
+        precio_unitario: 60.00,
+        precio_total: 180.00,
+        fecha: new Date("2024-01-19"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0019",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 32, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 20,
+        total_productos: 4,
+        precio_unitario: 45.00,
+        precio_total: 180.00,
+        fecha: new Date("2024-01-20"),
+        descuento: 20,
+        estatus: "Completada",
+        numero_compra: "COMP-0020",
+        tipo_Pago: "Tarjeta de débito",
+        productos: [
+            { id_producto: 33, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 21,
+        total_productos: 5,
+        precio_unitario: 95.00,
+        precio_total: 475.00,
+        fecha: new Date("2024-01-21"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0021",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 34, cantidad: 5 }
+        ]
+    },
+    {
+        id_compra: 22,
+        total_productos: 2,
+        precio_unitario: 110.00,
+        precio_total: 220.00,
+        fecha: new Date("2024-01-22"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0022",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 35, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 23,
+        total_productos: 3,
+        precio_unitario: 75.00,
+        precio_total: 225.00,
+        fecha: new Date("2024-01-23"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0023",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 36, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 24,
+        total_productos: 4,
+        precio_unitario: 65.00,
+        precio_total: 260.00,
+        fecha: new Date("2024-01-24"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0024",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 37, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 25,
+        total_productos: 1,
+        precio_unitario: 150.00,
+        precio_total: 150.00,
+        fecha: new Date("2024-01-25"),
+        descuento: 0,
+        estatus: "Cancelada",
+        numero_compra: "COMP-0025",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 38, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 26,
+        total_productos: 6,
+        precio_unitario: 40.00,
+        precio_total: 240.00,
+        fecha: new Date("2024-01-26"),
+        descuento: 20,
+        estatus: "Completada",
+        numero_compra: "COMP-0026",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 39, cantidad: 6 }
+        ]
+    },
+    {
+        id_compra: 27,
+        total_productos: 5,
+        precio_unitario: 55.00,
+        precio_total: 275.00,
+        fecha: new Date("2024-01-27"),
+        descuento: 15,
+        estatus: "Completada",
+        numero_compra: "COMP-0027",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 40, cantidad: 5 }
+        ]
+    },
+    {
+        id_compra: 28,
+        total_productos: 4,
+        precio_unitario: 90.00,
+        precio_total: 360.00,
+        fecha: new Date("2024-01-28"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0028",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 41, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 29,
+        total_productos: 3,
+        precio_unitario: 110.00,
+        precio_total: 330.00,
+        fecha: new Date("2024-01-29"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0029",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 42, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 30,
+        total_productos: 2,
+        precio_unitario: 85.00,
+        precio_total: 170.00,
+        fecha: new Date("2024-01-30"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0030",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 43, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 31,
+        total_productos: 1,
+        precio_unitario: 160.00,
+        precio_total: 160.00,
+        fecha: new Date("2024-01-31"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0031",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 44, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 32,
+        total_productos: 5,
+        precio_unitario: 75.00,
+        precio_total: 375.00,
+        fecha: new Date("2024-02-01"),
+        descuento: 15,
+        estatus: "Completada",
+        numero_compra: "COMP-0032",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 45, cantidad: 5 }
+        ]
+    },
+    {
+        id_compra: 33,
+        total_productos: 6,
+        precio_unitario: 50.00,
+        precio_total: 300.00,
+        fecha: new Date("2024-02-02"),
+        descuento: 20,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0033",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 46, cantidad: 6 }
+        ]
+    },
+    {
+        id_compra: 34,
+        total_productos: 3,
+        precio_unitario: 120.00,
+        precio_total: 360.00,
+        fecha: new Date("2024-02-03"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0034",
+        tipo_Pago: "Tarjeta de débito",
+        productos: [
+            { id_producto: 47, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 35,
+        total_productos: 2,
+        precio_unitario: 70.00,
+        precio_total: 140.00,
+        fecha: new Date("2024-02-04"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0035",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 48, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 36,
+        total_productos: 4,
+        precio_unitario: 85.00,
+        precio_total: 340.00,
+        fecha: new Date("2024-02-05"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0036",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 49, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 37,
+        total_productos: 1,
+        precio_unitario: 130.00,
+        precio_total: 130.00,
+        fecha: new Date("2024-02-06"),
+        descuento: 0,
+        estatus: "Cancelada",
+        numero_compra: "COMP-0037",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 50, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 38,
+        total_productos: 5,
+        precio_unitario: 65.00,
+        precio_total: 325.00,
+        fecha: new Date("2024-02-07"),
+        descuento: 15,
+        estatus: "Completada",
+        numero_compra: "COMP-0038",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 51, cantidad: 5 }
+        ]
+    },
+    {
+        id_compra: 39,
+        total_productos: 3,
+        precio_unitario: 95.00,
+        precio_total: 285.00,
+        fecha: new Date("2024-02-08"),
+        descuento: 5,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0039",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 52, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 40,
+        total_productos: 6,
+        precio_unitario: 40.00,
+        precio_total: 240.00,
+        fecha: new Date("2024-02-09"),
+        descuento: 20,
+        estatus: "Completada",
+        numero_compra: "COMP-0040",
+        tipo_Pago: "Tarjeta de débito",
+        productos: [
+            { id_producto: 53, cantidad: 6 }
+        ]
+    },
+    {
+        id_compra: 41,
+        total_productos: 2,
+        precio_unitario: 125.00,
+        precio_total: 250.00,
+        fecha: new Date("2024-02-10"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0041",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 54, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 42,
+        total_productos: 4,
+        precio_unitario: 55.00,
+        precio_total: 220.00,
+        fecha: new Date("2024-02-11"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0042",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 55, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 43,
+        total_productos: 1,
+        precio_unitario: 180.00,
+        precio_total: 180.00,
+        fecha: new Date("2024-02-12"),
+        descuento: 0,
+        estatus: "Completada",
+        numero_compra: "COMP-0043",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 56, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 44,
+        total_productos: 5,
+        precio_unitario: 60.00,
+        precio_total: 300.00,
+        fecha: new Date("2024-02-13"),
+        descuento: 15,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0044",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 57, cantidad: 5 }
+        ]
+    },
+    {
+        id_compra: 45,
+        total_productos: 2,
+        precio_unitario: 90.00,
+        precio_total: 180.00,
+        fecha: new Date("2024-02-14"),
+        descuento: 10,
+        estatus: "Completada",
+        numero_compra: "COMP-0045",
+        tipo_Pago: "PayPal",
+        productos: [
+            { id_producto: 58, cantidad: 2 }
+        ]
+    },
+    {
+        id_compra: 46,
+        total_productos: 6,
+        precio_unitario: 70.00,
+        precio_total: 420.00,
+        fecha: new Date("2024-02-15"),
+        descuento: 20,
+        estatus: "Completada",
+        numero_compra: "COMP-0046",
+        tipo_Pago: "Tarjeta de débito",
+        productos: [
+            { id_producto: 59, cantidad: 6 }
+        ]
+    },
+    {
+        id_compra: 47,
+        total_productos: 3,
+        precio_unitario: 80.00,
+        precio_total: 240.00,
+        fecha: new Date("2024-02-16"),
+        descuento: 0,
+        estatus: "Pendiente",
+        numero_compra: "COMP-0047",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 60, cantidad: 3 }
+        ]
+    },
+    {
+        id_compra: 48,
+        total_productos: 4,
+        precio_unitario: 85.00,
+        precio_total: 340.00,
+        fecha: new Date("2024-02-17"),
+        descuento: 5,
+        estatus: "Completada",
+        numero_compra: "COMP-0048",
+        tipo_Pago: "Transferencia bancaria",
+        productos: [
+            { id_producto: 61, cantidad: 4 }
+        ]
+    },
+    {
+        id_compra: 49,
+        total_productos: 1,
+        precio_unitario: 150.00,
+        precio_total: 150.00,
+        fecha: new Date("2024-02-18"),
+        descuento: 0,
+        estatus: "Cancelada",
+        numero_compra: "COMP-0049",
+        tipo_Pago: "Tarjeta de crédito",
+        productos: [
+            { id_producto: 62, cantidad: 1 }
+        ]
+    },
+    {
+        id_compra: 50,
+        total_productos: 5,
+        precio_unitario: 75.00,
+        precio_total: 375.00,
+        fecha: new Date("2024-02-19"),
+        descuento: 15,
+        estatus: "Completada",
+        numero_compra: "COMP-0050",
+        tipo_Pago: "Efectivo",
+        productos: [
+            { id_producto: 63, cantidad: 5 }
+        ]
+    }
+    
+]);
